@@ -1,7 +1,7 @@
 import { GET_LOCALIZATION } from "state/actions/types";
 
 const INITIAL_STATE = {
-  localization: { lat: 52.229676, lot: 21.012229 },
+  localization: { lat: 51.509865, lon: -0.118092 },
 };
 
 export default function (state = INITIAL_STATE, actions) {
