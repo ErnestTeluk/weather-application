@@ -1,11 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
+import Localization from "hoc/localization/localization";
+
 const StyledDiv = styled.div`
   width: 100%;
   height: 100%;
 `;
 
-const IndexPage = () => <StyledDiv>Hello World</StyledDiv>;
+const IndexPage = () => (
+  <>
+    <StyledDiv>Welcome to Wheather App</StyledDiv>
+  </>
+);
 
-export default IndexPage;
+export default Localization(IndexPage);
