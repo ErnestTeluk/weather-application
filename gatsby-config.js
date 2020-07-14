@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: `weather-application`,
@@ -5,6 +7,38 @@ module.exports = {
     author: `Ernest Teluk`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-root-imports",
+      options: {
+        assets: path.join(__dirname, "src/assets"),
+        components: path.join(__dirname, "src/components"),
+        pages: path.join(__dirname, "src/pages"),
+        templates: path.join(__dirname, "src/templates"),
+        utils: path.join(__dirname, "src/utils"),
+        src: path.join(__dirname, "src"),
+      },
+    },
+    {
+      resolve: "gatsby-plugin-styled-components",
+      options: {
+        displayName: process.env.NODE_ENV === `development`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        test: /\.js$/,
+        exclude: /(node_modules|cache|public)/,
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-stylelint",
+      options: { files: ["**/*.js"] },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,4 +65,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
