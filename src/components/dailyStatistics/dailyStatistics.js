@@ -15,8 +15,6 @@ import {
 const DailyStatistics = () => {
   const DailyData = DailyTracker();
 
-  console.log(DailyData);
-
   return (
     <>
       <DailyTrackerRow>
