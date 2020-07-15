@@ -1,11 +1,19 @@
 import styled from "styled-components";
 
 export const SectionWrapper = styled.div`
+  width: 100%;
+  height: auto;
   display: flex;
   flex-flow: column;
+
+  ${({ theme }) => theme.mq.bigPhone} {
+    width: auto;
+  }
 `;
 
 export const SectionTitle = styled.h1`
+  width: 100%;
+  padding: 0 20px;
   color: ${({ theme }) => theme.colors.grey};
   font-size: ${({ theme }) => theme.fontSize.l};
   font-family: ${({ theme }) => theme.fontFamily.montserrat};
@@ -13,6 +21,11 @@ export const SectionTitle = styled.h1`
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
+  margin-top: ${({ isStatistics }) => (isStatistics ? "150px" : "250px")};
+
+  ${({ theme }) => theme.mq.tablet} {
+    margin-top: 0;
+  }
 `;
 
 export const SectionText = styled.p`
@@ -50,6 +63,7 @@ export const SectionButton = styled.button`
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   border: none;
   margin: auto;
+  cursor: pointer;
 
   :hover {
     transform: scale(0.95);

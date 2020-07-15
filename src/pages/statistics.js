@@ -1,16 +1,12 @@
 import React from "react";
 
-import WeekTracker from "components/weekTracker/weekTracker";
-import DayTracker from "components/dayTracker/dayTracker";
+import Layout from "components/layout/layout";
+import StatisticsPage from "templates/statisticsPage/statisticsPage";
 
-const Statistics = () => {
-  const WeekData = WeekTracker();
-  const DayData = DayTracker();
-
-  console.log(WeekData);
-  console.log(DayData);
-
-  return <>test</>;
-};
+const Statistics = () => (
+  <Layout>
+    <StatisticsPage />
+  </Layout>
+);
 
 export default Statistics;

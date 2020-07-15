@@ -51,5 +51,9 @@ export const SiteWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: auto;
+
+  ${({ theme }) => theme.mq.tablet} {
+    height: 100vh;
+  }
 `;

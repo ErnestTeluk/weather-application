@@ -7,7 +7,7 @@ import {
   SectionTitle,
   SectionText,
   SectionButton,
-} from "./homepage.styled";
+} from "./homePage.styled";
 
 const HomePage = () => {
   const dispatch = useDispatch();
