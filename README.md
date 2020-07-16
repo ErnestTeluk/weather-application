@@ -17,7 +17,7 @@
 ## 💫 Run aplication
 
 1. clone repository to your local machine
-2. run npm install --save
-3. get into it
+2. get into it
+3. run npm install --save
 4. run command "gatsby develop"
 5. go to http://localhost:8000/
