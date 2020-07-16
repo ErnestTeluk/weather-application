@@ -19,5 +19,6 @@
 1. clone repository to your local machine
 2. get into it
 3. run npm install --save
+4. create .env.development file and create variable GATSBY_WEATHER_API_KEY with api key from https://openweathermap.org/api
 4. run command "gatsby develop"
 5. go to http://localhost:8000/
